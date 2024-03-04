@@ -7,7 +7,7 @@ public class TheaterBooking {
 
     public static boolean checkSeatAvailability(char row, int n, ArrayList<Integer> seatNumbers) {
         row = Character.toUpperCase(row);
-        int rowIndex = (int) row - 65; // 'A' is ASCII 65
+        int rowIndex = (int) row - 65;
         Collections.sort(seatNumbers);
         for (int seatNumber : seatNumbers) {
             if (seatNumber < 1 || seatNumber > 6 || seats[rowIndex][seatNumber - 1] == 1)
